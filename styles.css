@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    color: #eeeeee;
+}
+
+header>h1 {
+    background: rgb(44, 65, 71);
+    padding: 3px;
+    font-size: 30px;
+    box-shadow: 0 0 5px whitesmoke;
+}
+
+body {
+    background: rgb(30, 43, 30);
+    box-shadow: 0 0 5px whitesmoke;
+}
+
+/* Number of Rounds */
+
+.round-choice {
+    font-size: 20px;
+    margin: auto;
+    font-weight: bold;
+    padding: 5px;
+    box-shadow: 0 0 5px #3c3e44;
+    border: 2px solid gray;
+    border-radius: 5px;
+    width: 600px;
+    position: relative;
+}
+
+.num-of-rounds {
+    font-size: 20px;
+    padding: 3px 35px 3px 0px;
+    border: 1px solid #1e2b1e;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #455045;
+    background-color: #333333;
+    margin-left: 20px;
+    /* Removing default arrow */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Adding custom arrow */
+    background-image: url('./images/arrow.svg');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-y: center;
+    background-position-x: 70px;
+}
+
+#rounds:hover {
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: #000000;
+    background-color: #797c7b;
+}
+
+/* Score Board */
+
+.score-board {
+    margin: auto;
+    border: 2px solid gray;
+    border-radius: 5px;
+    height: 130px;
+    width: 600px;
+    position: relative;
+}
+
+#user-player {
+    position: relative;
+    float: left;
+    left: 100px;
+}
+
+#comp-player {
+    position: relative;
+    float: right;
+    right: 70px;
+}
+
+.virtical-line {
+    height: 127px;
+    width: 1px;
+    border: 1px solid gray;
+    margin-left: 70px;
+    display: inline-block;
+}
+
+#reset {
+    margin: auto;
+}
+
+#user-label, #reset {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid #51577a;
+    border-radius: 5px;
+    box-shadow: 0 0 5px green;
+    background-color: #1e2335;
+    padding: 5px;
+}
+
+#comp-label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid #51577a;
+    border-radius: 5px;
+    box-shadow: 0 0 5px red;
+    background-color: #1e2335;
+    padding: 5px;
+}
+
+#user-score {
+    font-size: 50px;
+    text-shadow: 0 0 5px green;
+}
+
+#comp-score {
+    font-size: 50px;
+    text-shadow: 0 0 5px red;
+}
+
+/* Result */
+
+#result {
+    margin: auto;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0 0 5px #0d774b;
+    padding: 5px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    width: 600px;
+    position: relative;
+}
+
+.red-round {
+    color: #ff0606;
+}
+
+/* choices */
+
+.choice-main {
+    margin: auto;
+    border: 2px solid gray;
+    border-radius: 5px;
+    width: 600px;
+    position: relative;
+}
+
+.user-choices {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+.user-choices>p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid #51577a;
+    border-radius: 5px;
+    box-shadow: 0 0 5px green;
+    background-color: #1e2335;
+    padding: 5px;
+}
+
+.comp-choices {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.comp-choices>p {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid #51577a;
+    border-radius: 5px;
+    box-shadow: 0 0 5px red;
+    background-color: #1e2335;
+    padding: 5px;
+}
+
+.choice {
+    border: 2px solid gray;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px #eeeeee;
+    transition: all 0.3s ease;
+}
+
+#ur:hover, #up:hover, #us:hover {
+    cursor: pointer;
+    background: #1fb393;
+}
+
+/* Box color change on result of match */
+
+.green-glow {
+    border: 4px solid green;
+    box-shadow: 0 0 10px greenyellow;
+}
+
+.red-glow {
+    border: 4px solid red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.486);
+}
+
+.yellow-glow {
+    border: 4px solid yellow;
+    box-shadow: 0 0 10px yellowgreen;
+}
+
+.red-result {
+    text-shadow: 0 0 5px red;
+}
+
+.green-result {
+    text-shadow: 0 0 5px green;
+}
+
+.yellow-result {
+    text-shadow: 0 0 5px yellow;
+}
+
+/* Enter name pop-up */
+
+.popup {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.popup-content {
+    height: 250px;
+    width: 500px;
+    background: rgb(131, 238, 104);
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.enterName {
+    color: #000000;
+    display: block;
+}
+
+#nameInput {
+    margin: auto;
+    margin-top: 70px;
+    box-shadow: 10px 10px 10px #494747;
+}
+
+#okName {
+    margin: auto;
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #494747;
+}
+
+#okName:hover {
+    background: #32c545;
+    color: white;
+    box-shadow: 10px 10px 10px #0d774b;
+}

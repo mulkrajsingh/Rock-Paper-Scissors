@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Paper Scissors</h1>
+    </header>
+    <br>
+    <div class="main-form">
+        <!-- Number of rounds -->
+        <div class="round-choice">
+            <label id="rounds-label" for="rounds">Number of rounds</label>
+            <select name="rounds" id="rounds" class="num-of-rounds">
+                <option value="select">Select</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="9">9</option>
+                <option value="15">15</option>
+            </select>
+        </div>
+        <br>
+        <!-- Score Board -->
+        <div class="score-board">
+            <div id="user-player">
+                <div for="user-score" id="user-label">You</div>
+                <br>
+                <div id="user-score" class="user-player">0</div>
+            </div>
+
+            <div class="virtical-line"></div>
+
+            <div id="comp-player">
+                <div for="comp-score" id="comp-label">Computer</div>
+                <br>
+                <div id="comp-score" class="comp-player">0</div>
+            </div>
+        </div>
+        <br>
+        <!-- Result -->
+        <div id="result">
+            <p id="output">xdfhf </p>
+            <button id="reset">New game</button>
+        </div>
+        <br>
+        <!-- Choices -->
+        <div class="choice-main">
+            <div class="user-choices">
+                <p>You</p>
+                <div class="choice" id="ur">
+                    <img src="./images/Rock.png" alt="Rock">
+                </div>
+                <div class="choice" id="up">
+                    <img src="./images/Paper.png" alt="Paper">
+                </div>
+                <div class="choice" id="us">
+                    <img src="./images/Scissors.png" alt="Scissors">
+                </div>
+            </div>
+
+            <div class="comp-choices">
+                <p>Comp</p>
+                <div class="choice" id="cr">
+                    <img src="./images/Rock.png" alt="Rock">
+                </div>
+                <div class="choice" id="cp">
+                    <img src="./images/Paper.png" alt="Paper">
+                </div>
+                <div class="choice" id="cs">
+                    <img src="./images/Scissors.png" alt="Scissors">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pop-up for user choice -->
+    <div class="popup">
+        <div class="popup-content">
+            <input type="text" id="nameInput" class="enterName" placeholder="Enter name">
+            <button id="okName" class="enterName">Enter Game</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
