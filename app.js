@@ -196,31 +196,15 @@ function main() {
     getUserName_button.addEventListener('click', () => getName());
 
     newGame.addEventListener('click', () => resetGame());
-
-    userRock_div.addEventListener('click', () => {
-        if (checkRound() && winner) {
-            game('ur');
-        } else if (!winner) {
-            result_p.innerHTML = `Game is over. Select new game. `;
-            newGame.style.display = 'block';
-        }
-    });
-    userPaper_div.addEventListener('click', () => {
-        if (checkRound() && winner) {
-            game('up');
-        } else if (!winner) {
-            result_p.innerHTML = `Game is over. Select new game. `;
-            newGame.style.display = 'block';
-        }
-    });
-    userScissors_div.addEventListener('click', () => {
-        if (checkRound() && winner) {
-            game('us');
-        } else if (!winner) {
-            result_p.innerHTML = `Game is over. Select new game. `;
-            newGame.style.display = 'block';
-        }
-    });
 }
 
 main();
+
+function choiceClick(choice) {
+    if (checkRound() && winner) {
+        game(choice);
+    } else if (!winner) {
+        result_p.innerHTML = `Game is over. Select new game. `;
+        newGame.style.display = 'block';
+    }
+}
